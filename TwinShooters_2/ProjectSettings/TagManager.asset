@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player A
+  - Player B
+  - Divider
+  - Player Bullet
+  - Heal Bullet
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX
