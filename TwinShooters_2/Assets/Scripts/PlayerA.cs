@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerA : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float move = 1f;
+    public float move = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,11 @@ public class PlayerA : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Vector2 pos = transform.position;
+        Vector2 pos = transform.position;
         if(Input.GetKeyDown(KeyCode.I))
         {
-            rb.AddForce(move * transform.up);
+            pos.y += 0.1f;
         }
-                
+        transform.position = pos;
     }
 }
