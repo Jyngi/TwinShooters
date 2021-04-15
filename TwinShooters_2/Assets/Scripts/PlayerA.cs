@@ -5,23 +5,30 @@ using UnityEngine.UI;
 
 public class PlayerA : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public float move = 10f;
-
+    public float move = 5f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Vector2 pos = transform.position;
-        if(Input.GetKeyDown(KeyCode.I))
+        //Vector2 pos = transform.position;
+        if(Input.GetKey(KeyCode.I))
         {
-            pos.y += 0.1f;
+            transform.Translate(new Vector2(0, move * Time.deltaTime));
         }
-        transform.position = pos;
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            transform.Rotate(new Vector3(0, 0, 90f));
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            transform.Rotate(new Vector3(0, 0, -90f));
+        }
+
     }
 }
