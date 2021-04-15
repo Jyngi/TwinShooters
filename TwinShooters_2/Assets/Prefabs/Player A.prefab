@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 442530811606262378}
   - component: {fileID: 442530811606262379}
   - component: {fileID: 442530811606262380}
-  - component: {fileID: 442530811606262381}
+  - component: {fileID: 3881518917904363246}
   m_Layer: 10
   m_Name: Player A
   m_TagString: Player A
@@ -176,7 +176,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &442530811606262381
+--- !u!114 &3881518917904363246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,3 +191,6 @@ MonoBehaviour:
   firePoint: {fileID: 442530811180030700}
   P1Bullet: {fileID: 1402017534380312702, guid: 6232c15877cee5d42879d6208ca2cf93,
     type: 3}
+  fireRate: 3
+  timerVariable: 0
+  timerStart: 0

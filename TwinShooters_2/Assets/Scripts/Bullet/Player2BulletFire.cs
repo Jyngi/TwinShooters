@@ -8,12 +8,19 @@ public class Player2BulletFire : MonoBehaviour
   	public Transform firePoint;
   	public GameObject P2Bullet;
     // Update is called once per frame
+    public float fireRate = 3.0f;
+    public float timerVariable = 0f;
+    public float timerStart = 0f;
+    // Update is called once per frame
     void Update()
     {
-    	if (Input.GetButtonDown("Fire2"))
-    	{
-    		Fire();
-    	}
+        timerVariable += Time.deltaTime;
+        Debug.Log(timerVariable);
+        if(timerVariable > fireRate)
+        {
+            Fire();
+            timerVariable = timerStart;
+        }
 
     }
 
