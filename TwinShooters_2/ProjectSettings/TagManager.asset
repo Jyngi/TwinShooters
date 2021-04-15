@@ -10,8 +10,6 @@ TagManager:
   - Player Bullet
   - Heal Bullet
   - Enemy Bullet
-  - Enemy
-  - Wall
   layers:
   - Default
   - TransparentFX
@@ -21,12 +19,12 @@ TagManager:
   - UI
   - 
   - 
-  - Enemy Spawn
-  - Enemy
-  - Player
-  - Wall
-  - Bullet
-  - Divider
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

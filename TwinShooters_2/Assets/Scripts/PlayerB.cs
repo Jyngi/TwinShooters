@@ -20,13 +20,13 @@ public class PlayerB : MonoBehaviour
         {
             transform.Translate(new Vector2(0, move * Time.deltaTime));
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(new Vector3(0, 0, 90f));
+            transform.Rotate(new Vector3(0, 0, 180f * Time.deltaTime));
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(new Vector3(0, 0, -90f));
+            transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
     }

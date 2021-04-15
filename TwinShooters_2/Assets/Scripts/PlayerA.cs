@@ -21,13 +21,13 @@ public class PlayerA : MonoBehaviour
         {
             transform.Translate(new Vector2(0, move * Time.deltaTime));
         }
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKey(KeyCode.J))
         {
-            transform.Rotate(new Vector3(0, 0, 90f));
+            transform.Rotate(new Vector3(0, 0, 180f * Time.deltaTime));
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
-            transform.Rotate(new Vector3(0, 0, -90f));
+            transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
     }
