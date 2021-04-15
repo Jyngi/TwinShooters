@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 489794871}
   - component: {fileID: 489794870}
   - component: {fileID: 489794872}
+  - component: {fileID: 489794873}
   m_Layer: 0
   m_Name: Player B
   m_TagString: Player B
@@ -420,6 +421,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &489794873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489794869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b241a5c809f3da4cb9695874843100a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +610,7 @@ GameObject:
   - component: {fileID: 1357023648}
   - component: {fileID: 1357023651}
   - component: {fileID: 1357023650}
+  - component: {fileID: 1357023652}
   m_Layer: 0
   m_Name: Player A
   m_TagString: Player A
@@ -701,6 +716,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1357023652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357023647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8645b9cc3a20f34cbe26ee6e8643b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: 5
 --- !u!1 &1435527149
 GameObject:
   m_ObjectHideFlags: 0
