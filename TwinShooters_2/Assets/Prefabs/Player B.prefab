@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 672832991153278644}
   - component: {fileID: 672832991153278645}
   - component: {fileID: 672832991153278651}
-  - component: {fileID: 672832991153278649}
   - component: {fileID: 672832991153278650}
   - component: {fileID: 672832991153278648}
+  - component: {fileID: 5350010546433318616}
   m_Layer: 10
   m_Name: Player B
   m_TagString: Player B
@@ -137,19 +137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &672832991153278649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672832991153278646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9260564b3ca8542838bdb20a1261c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 5
 --- !u!61 &672832991153278650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,3 +178,19 @@ MonoBehaviour:
   firePoint: {fileID: 672832989442801388}
   P2Bullet: {fileID: 1978621044103286622, guid: c946280fe6d29ac4bb0d033da3473d77,
     type: 3}
+  fireRate: 3
+  timerVariable: 0
+  timerStart: 0
+--- !u!114 &5350010546433318616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672832991153278646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b241a5c809f3da4cb9695874843100a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: 5
