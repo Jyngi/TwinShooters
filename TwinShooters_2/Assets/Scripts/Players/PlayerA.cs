@@ -21,14 +21,25 @@ public class PlayerA : MonoBehaviour
         {
             transform.Translate(new Vector2(0, move * Time.deltaTime));
         }
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKey(KeyCode.J))
         {
-            transform.Rotate(new Vector3(0, 0, 90f));
+            transform.Rotate(new Vector3(0, 0, 180f * Time.deltaTime));
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
-            transform.Rotate(new Vector3(0, 0, -90f));
+            transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            // Add line here to instantiate disabled player
+        }
     }
 }

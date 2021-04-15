@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player1BulletCode : MonoBehaviour
+{
+    public float speed = 15f;
+    public Rigidbody2D rb;
+    public GameObject WallPrefab;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    	rb.velocity = transform.up * speed;
+        
+    }
+
+    void OnTriggerEnter2d (Collider2D hitInfo)
+    {
+        if(hitInfo.gameObject.tag == "Switch A")
+        {
+            Destroy(gameObject);
+            Destroy(WallPrefab);
+        }
+        else
+        {
+            Debug.Log(hitInfo.name);
+            Destroy(gameObject);
+        }
+    	
+    }
+
+
+}
