@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerA : MonoBehaviour
 {
     public float move = 5f;
+    [SerializeField]
+    private GameObject explosionVFX;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class PlayerA : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(collision.gameObject);
             // Add line here to instantiate disabled player

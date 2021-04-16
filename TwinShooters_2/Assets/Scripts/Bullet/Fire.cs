@@ -14,7 +14,7 @@ public class Fire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    	InvokeRepeating("FireBullets",0f,2f);    
+    	InvokeRepeating("FireBullets",0f,0.5f);    
     }
     private void FireBullets(){
     	float angleStep = (endAngle - startAngle)/bulletAmount;
