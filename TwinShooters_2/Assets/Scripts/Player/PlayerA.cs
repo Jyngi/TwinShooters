@@ -30,5 +30,25 @@ public class PlayerA : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
+
+        if (transform.position.y <= -6f)
+            Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player B Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 }

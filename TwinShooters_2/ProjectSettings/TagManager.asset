@@ -7,9 +7,15 @@ TagManager:
   - Player A
   - Player B
   - Divider
-  - Player Bullet
   - Heal Bullet
   - Enemy Bullet
+  - Wall
+  - Switch A
+  - Switch B
+  - Enemy
+  - Player A Bullet
+  - Player B Bullet
+  - WallSpawn
   layers:
   - Default
   - TransparentFX
@@ -19,13 +25,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Player Bullet
+  - Divider
+  - Enemy Bullet
+  - Player
+  - Enemy
+  - Border
   - 
   - 
   - 

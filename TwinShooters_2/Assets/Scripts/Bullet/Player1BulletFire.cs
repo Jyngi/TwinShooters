@@ -14,7 +14,7 @@ public class Player1BulletFire : MonoBehaviour
     void Update()
     {
     	timerVariable += Time.deltaTime;
-        Debug.Log(timerVariable);
+        //Debug.Log(timerVariable);
         if(timerVariable > fireRate)
     	{
     		Fire();
