@@ -14,11 +14,7 @@ public class Player1BulletCode : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2d (Collider2D hitInfo)
-    {
-    	Debug.Log(hitInfo.name);
-    	Destroy(gameObject);
-    }
+
     void Update(){
 
 	    if (transform.position.y > 5f)
@@ -38,9 +34,18 @@ public class Player1BulletCode : MonoBehaviour
 	    	Destroy(gameObject);
 
 	    }
-	    
+	 
+	    void OnTriggerEnter2d (Collider2D hitInfo)
+    	{
+	    	Debug.Log(hitInfo.name);
+	    	
+	    	//if (hitInfo.gameObject.tag == "Player B")
+		    //{
+		    //	Destroy (gameObject.FindWithTag("Player B"));
+		    //}
+		    Destroy(gameObject);
 
-	   
+    	}
 	}
 
 

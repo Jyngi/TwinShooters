@@ -7,12 +7,11 @@ public class PlayerB : MonoBehaviour
     public float move = 5f;
     [SerializeField]
     private GameObject explosionVFX;
+    public bool isAlive;
+    public Transform spawnPoint;
+    [SerializeField]
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -37,11 +36,26 @@ public class PlayerB : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+            isAlive = false;
+            Debug.Log("ya died but 2");
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            Resurrect2();
+
             // Add line here to instantiate disabled player
         }
-        Debug.Log(collision.gameObject.tag);
+
     }
+    public void Resurrect2()
+    {
+        if (isAlive == false)
+        {
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log("u back :D");
+            isAlive = true;
+        }        
+    }
+
 }
