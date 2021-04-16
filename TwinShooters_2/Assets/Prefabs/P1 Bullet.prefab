@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1402017534380312701}
   - component: {fileID: 2602207161813943783}
   - component: {fileID: -5655469263904091860}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: P1 Bullet
   m_TagString: Player A Bullet
   m_Icon: {fileID: 0}
@@ -135,5 +135,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   rb: {fileID: 1402017534380312701}
-  WallPrefab: {fileID: 4828697998610202750, guid: 41d657f6e813d55468501ed59c2a72f8,
-    type: 3}

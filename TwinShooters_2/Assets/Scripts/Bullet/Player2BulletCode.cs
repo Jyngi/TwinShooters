@@ -18,6 +18,29 @@ public class Player2BulletCode : MonoBehaviour
     	Debug.Log(hitInfo.name);
     	Destroy(gameObject);
     }
+    void Update(){
+
+	    if (transform.position.y > 5f)
+	    {
+	    	Destroy(gameObject);
+	    }
+	    if (transform.position.y < -6f)
+	    {
+	    	Destroy(gameObject);
+	    }
+	    if (transform.position.x < -7.0f)
+	    {
+	    	Destroy(gameObject);
+	    }
+	    if (transform.position.x > 7.0f)
+	    {
+	    	Destroy(gameObject);
+
+	    }
+	    
+
+	   
+	}
 
 
 }

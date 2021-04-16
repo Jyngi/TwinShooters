@@ -9,12 +9,12 @@ TagManager:
   - Divider
   - Heal Bullet
   - Enemy Bullet
-  - Enemy
   - Wall
-  - Player A Bullet
-  - Player B Bullet
   - Switch A
   - Switch B
+  - Enemy
+  - Player A Bullet
+  - Player B Bullet
   layers:
   - Default
   - TransparentFX
@@ -24,12 +24,12 @@ TagManager:
   - UI
   - 
   - 
-  - wall
-  - Enemy
-  - Player
-  - Enemy Bullet
+  - Wall
   - Player Bullet
   - Divider
+  - Enemy Bullet
+  - Player
+  - Enemy
   - 
   - 
   - 
