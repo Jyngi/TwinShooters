@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d3723aee409df4aab4958281e0d037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletAmount: 10
+  bulletAmount: 3
   startAngle: 90
   endAngle: 270
+  enemyFireRate: 1.5

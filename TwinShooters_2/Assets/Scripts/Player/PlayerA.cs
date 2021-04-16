@@ -32,14 +32,16 @@ public class PlayerA : MonoBehaviour
         }
 
 
-        if (transform.position.y <= -6f)
-            Destroy(gameObject);
+        if (transform.position.y <= -6f){
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);
+            Destroy(gameObject);}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Enemy")
         {
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
@@ -49,19 +51,9 @@ public class PlayerA : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player B Bullet")
         {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == "Enemy")
-        {
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Destroy(collision.gameObject);
-            // Add line here to instantiate disabled player
         }
     }
+
 }

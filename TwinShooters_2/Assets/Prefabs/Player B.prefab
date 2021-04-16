@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 672832991153278651}
   - component: {fileID: 672832991153278650}
   - component: {fileID: 672832991153278648}
-  - component: {fileID: 5350010546433318616}
+  - component: {fileID: 226185153}
   m_Layer: 12
   m_Name: Player B
   m_TagString: Player B
@@ -181,7 +181,7 @@ MonoBehaviour:
   fireRate: 3
   timerVariable: 0
   timerStart: 0
---- !u!114 &5350010546433318616
+--- !u!114 &226185153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 672832991153278646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b241a5c809f3da4cb9695874843100a, type: 3}
+  m_Script: {fileID: 11500000, guid: 81e8708611c9d944fbb8427c5ccc272b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move: 5
+  explosionVFX: {fileID: 3902515784784032564, guid: fef4b30b52e26194b8e5b1b42b306209,
+    type: 3}

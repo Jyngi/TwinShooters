@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6968391187808196278}
   - component: {fileID: 7821104267916790041}
   - component: {fileID: 5685277349490847028}
+  - component: {fileID: -1156327430366541313}
   m_Layer: 11
   m_Name: bullet_enemy
   m_TagString: Enemy Bullet
@@ -95,3 +96,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  explosionVFX: {fileID: 3902515784784032564, guid: fef4b30b52e26194b8e5b1b42b306209,
+    type: 3}
+--- !u!58 &-1156327430366541313
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288981999847503434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1875

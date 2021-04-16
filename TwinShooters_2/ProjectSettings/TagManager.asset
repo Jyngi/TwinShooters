@@ -15,10 +15,7 @@ TagManager:
   - Enemy
   - Player A Bullet
   - Player B Bullet
-<<<<<<< HEAD
-=======
   - WallSpawn
->>>>>>> Krishna3
   layers:
   - Default
   - TransparentFX
@@ -34,11 +31,7 @@ TagManager:
   - Enemy Bullet
   - Player
   - Enemy
-<<<<<<< HEAD
-  - 
-=======
   - Border
->>>>>>> Krishna3
   - 
   - 
   - 

@@ -9,12 +9,16 @@ public class Fire : MonoBehaviour
 
 	[SerializeField]
 	private float startAngle = 90f, endAngle = 270f;
+
+    [SerializeField]
+    private float enemyFireRate = 1.0f;
+
 	private Vector2 bulletMoveDirection;
 
     // Start is called before the first frame update
     void Start()
     {
-    	InvokeRepeating("FireBullets",0f,0.5f);    
+    	InvokeRepeating("FireBullets",0f,enemyFireRate);    
     }
     private void FireBullets(){
     	float angleStep = (endAngle - startAngle)/bulletAmount;

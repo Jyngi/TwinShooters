@@ -30,14 +30,16 @@ public class PlayerB : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
-        if (transform.position.y <= -6f)
-            Destroy(gameObject);
+        if (transform.position.y <= -6f){
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);
+            Destroy(gameObject);}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
@@ -46,20 +48,9 @@ public class PlayerB : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player A Bullet")
         {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == "Enemy")
-        {
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Destroy(collision.gameObject);
-            // Add line here to instantiate disabled player
         }
-        Debug.Log(collision.gameObject.tag);
     }
+
 }

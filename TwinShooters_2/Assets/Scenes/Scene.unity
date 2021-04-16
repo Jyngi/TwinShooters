@@ -379,13 +379,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player B
       objectReference: {fileID: 0}
-    - target: {fileID: 672832991153278646, guid: 4615bee0be6e96f49b0d816d341ffc4b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 672832991153278649, guid: 4615bee0be6e96f49b0d816d341ffc4b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4615bee0be6e96f49b0d816d341ffc4b, type: 3}
 --- !u!1 &279126328
 GameObject:
@@ -892,11 +886,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player A
-      objectReference: {fileID: 0}
-    - target: {fileID: 442530811606262359, guid: 74cdf020a92e0e24f972a3de73660030,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 442530811606262377, guid: 74cdf020a92e0e24f972a3de73660030,
         type: 3}
