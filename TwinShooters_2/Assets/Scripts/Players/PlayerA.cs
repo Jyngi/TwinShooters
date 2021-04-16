@@ -30,4 +30,15 @@ public class PlayerA : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            // Add line here to instantiate disabled player
+        }
+    }
 }

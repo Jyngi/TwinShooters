@@ -281,28 +281,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player B
       objectReference: {fileID: 0}
+    - target: {fileID: 672832991153278646, guid: 4615bee0be6e96f49b0d816d341ffc4b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 672832991153278649, guid: 4615bee0be6e96f49b0d816d341ffc4b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4615bee0be6e96f49b0d816d341ffc4b, type: 3}
---- !u!1 &228200603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 672832991153278646, guid: 4615bee0be6e96f49b0d816d341ffc4b,
-    type: 3}
-  m_PrefabInstance: {fileID: 226185151}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &228200610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228200603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b241a5c809f3da4cb9695874843100a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 5
 --- !u!1 &279126328
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +301,7 @@ GameObject:
   - component: {fileID: 279126329}
   - component: {fileID: 279126331}
   - component: {fileID: 279126332}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: Divider
   m_TagString: Divider
   m_Icon: {fileID: 0}
@@ -608,6 +594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player A
+      objectReference: {fileID: 0}
+    - target: {fileID: 442530811606262359, guid: 74cdf020a92e0e24f972a3de73660030,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 442530811606262377, guid: 74cdf020a92e0e24f972a3de73660030,
         type: 3}
