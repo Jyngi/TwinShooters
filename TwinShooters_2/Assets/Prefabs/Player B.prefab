@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 672832991153278651}
   - component: {fileID: 672832991153278650}
   - component: {fileID: 672832991153278648}
-  - component: {fileID: 321021465}
+  - component: {fileID: 5350010546433318616}
   m_Layer: 12
   m_Name: Player B
   m_TagString: Player B
@@ -178,10 +178,10 @@ MonoBehaviour:
   firePoint: {fileID: 672832989442801388}
   P2Bullet: {fileID: 1978621044103286622, guid: c946280fe6d29ac4bb0d033da3473d77,
     type: 3}
-  fireRate: 0.7
+  fireRate: 3
   timerVariable: 0
   timerStart: 0
---- !u!114 &321021465
+--- !u!114 &5350010546433318616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 672832991153278646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29c5bbd24ade91c4889317e9ba296c1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b241a5c809f3da4cb9695874843100a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move: 5

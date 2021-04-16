@@ -24,8 +24,19 @@ public class WallSpawn : MonoBehaviour
         if(time >= spawnTime && wallCount == 0)
         {
             Instantiate(WallPrefab, spawnPos, transform.rotation);
-            time = 0;
             wallCount++;
         }
+
+        if(WallPrefab.transform.position.y <= -7f)
+        {
+            Destroy(gameObject);
+            deleteWall();
+        }
+    }
+
+    public void deleteWall()
+    {
+        wallCount--;
+        time = 0;
     }
 }
