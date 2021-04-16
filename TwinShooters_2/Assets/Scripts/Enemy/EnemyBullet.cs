@@ -7,6 +7,8 @@ public class EnemyBullet : MonoBehaviour
 	private Vector2 moveDirection;
 	[SerializeField]
 	private float moveSpeed;
+    [SerializeField]
+    private GameObject explosionVFX;
 	private void OnEnable(){
 		Invoke("Destroy", 3f);
 	}
@@ -29,5 +31,10 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnDisable(){
     	CancelInvoke();
+    }
+    private void OnCollisionEnter2D(Collision2D collider){
+        if (collider.gameObject.tag == "Player A" || collider.gameObject.tag == "Player B"){
+            gameObject.SetActive(false);
+        }
     }
 }

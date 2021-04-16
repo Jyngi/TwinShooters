@@ -37,12 +37,21 @@ public class PlayerB : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             isAlive = false;
-            Debug.Log("ya died but 2");
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Resurrect2();
 
             // Add line here to instantiate disabled player
+        }
+        if(collision.gameObject.tag == "Enemy Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            Resurrect2();
+        }
+        if(collision.gameObject.tag == "Player A Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            Resurrect2();
         }
 
     }

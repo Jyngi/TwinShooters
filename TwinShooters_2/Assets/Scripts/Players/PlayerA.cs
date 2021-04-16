@@ -29,18 +29,16 @@ public class PlayerA : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
-
-    Debug.Log(isAlive);
     
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
 
         if (collision.gameObject.tag == "Enemy")
         {
             isAlive = false;
-            Debug.Log("ya died");
 
             Instantiate(explosionVFX,transform.position, Quaternion.identity);            
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -49,6 +47,18 @@ public class PlayerA : MonoBehaviour
 
 
             // Add line here to instantiate disabled player
+        }
+        if(collision.gameObject.tag == "Enemy Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Resurrect();
+        }
+        if(collision.gameObject.tag == "Player B Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Resurrect();
         }
     }
     public void Resurrect()

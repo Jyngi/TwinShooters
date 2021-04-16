@@ -17,35 +17,19 @@ public class Player1BulletCode : MonoBehaviour
 
     void Update(){
 
-	    if (transform.position.y > 5f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.y < -6f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.x < -7.0f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.x > 7.0f)
-	    {
-	    	Destroy(gameObject);
-
-	    }
+    	Destroy(gameObject,4f);
 	 
-	    void OnTriggerEnter2d (Collider2D hitInfo)
-    	{
-	    	Debug.Log(hitInfo.name);
+	    // void OnTriggerEnter2d (Collider2D hitInfo)
+    	// {
+	    // 	Debug.Log(hitInfo.name);
 	    	
-	    	//if (hitInfo.gameObject.tag == "Player B")
-		    //{
-		    //	Destroy (gameObject.FindWithTag("Player B"));
-		    //}
-		    Destroy(gameObject);
+	    // 	//if (hitInfo.gameObject.tag == "Player B")
+		   //  //{
+		   //  //	Destroy (gameObject.FindWithTag("Player B"));
+		   //  //}
+		   //  Destroy(gameObject);
 
-    	}
+    	// }
 	}
 
 
