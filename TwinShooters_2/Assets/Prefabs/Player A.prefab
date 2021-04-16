@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 442530811606262379}
   - component: {fileID: 442530811606262380}
   - component: {fileID: 3881518917904363246}
-  - component: {fileID: 610258006}
+  - component: {fileID: 1950364000}
   m_Layer: 12
   m_Name: Player A
   m_TagString: Player A
@@ -178,10 +178,10 @@ MonoBehaviour:
   firePoint: {fileID: 442530811180030700}
   P1Bullet: {fileID: 1402017534380312702, guid: 6232c15877cee5d42879d6208ca2cf93,
     type: 3}
-  fireRate: 3
+  fireRate: 0.7
   timerVariable: 0
   timerStart: 0
---- !u!114 &610258006
+--- !u!114 &1950364000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,9 +190,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 442530811606262359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31960a5613808fc4490966c264de8167, type: 3}
+  m_Script: {fileID: 11500000, guid: b7637b5b78f27fa49a4252df7d5a7774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move: 5
   explosionVFX: {fileID: 3902515784784032564, guid: fef4b30b52e26194b8e5b1b42b306209,
     type: 3}
+  isAlive: 1

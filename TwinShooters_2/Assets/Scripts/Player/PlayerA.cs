@@ -7,12 +7,11 @@ public class PlayerA : MonoBehaviour
     public float move = 5f;
     [SerializeField]
     private GameObject explosionVFX;
+    public bool isAlive;
+    public Transform spawnPoint;
+    [SerializeField]
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Start is called before the first frame updat
 
     // Update is called once per frame
     void Update()
@@ -30,30 +29,47 @@ public class PlayerA : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
-
-
-        if (transform.position.y <= -6f){
-            Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);}
+    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        Debug.Log(collision.gameObject.tag);
+
+        if (collision.gameObject.tag == "Enemy")
         {
-            Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            isAlive = false;
+
+            Instantiate(explosionVFX,transform.position, Quaternion.identity);            
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
             Destroy(collision.gameObject);
+            Resurrect();
+
+
+            // Add line here to instantiate disabled player
+        }
+        if(collision.gameObject.tag == "Enemy Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Resurrect();
+        }
+        if(collision.gameObject.tag == "Player B Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Resurrect();
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Resurrect()
     {
-        if (collision.gameObject.tag == "Player B Bullet")
+        if (isAlive == false)
         {
-            Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log("u back :D");
+            isAlive = true;
         }
     }
-
 }

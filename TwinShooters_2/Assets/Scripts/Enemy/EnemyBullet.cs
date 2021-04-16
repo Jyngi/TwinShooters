@@ -34,8 +34,7 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collider){
         if (collider.gameObject.tag == "Player A" || collider.gameObject.tag == "Player B"){
-            Instantiate(explosionVFX,transform.position,Quaternion.identity);
-            Destroy(collider.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -7,12 +7,11 @@ public class PlayerB : MonoBehaviour
     public float move = 5f;
     [SerializeField]
     private GameObject explosionVFX;
+    public bool isAlive;
+    public Transform spawnPoint;
+    [SerializeField]
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -30,27 +29,42 @@ public class PlayerB : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -180f * Time.deltaTime));
         }
 
-        if (transform.position.y <= -6f){
-            Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "Enemy")
         {
+            isAlive = false;
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            Resurrect2();
+
+            // Add line here to instantiate disabled player
         }
+        if(collision.gameObject.tag == "Enemy Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            Resurrect2();
+        }
+        if(collision.gameObject.tag == "Player A Bullet"){
+            isAlive = false;
+            Instantiate(explosionVFX,transform.position,Quaternion.identity);
+            Resurrect2();
+        }
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Resurrect2()
     {
-        if (collision.gameObject.tag == "Player A Bullet")
+        if (isAlive == false)
         {
-            Instantiate(explosionVFX,transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log("u back :D");
+            isAlive = true;
+        }        
     }
 
 }

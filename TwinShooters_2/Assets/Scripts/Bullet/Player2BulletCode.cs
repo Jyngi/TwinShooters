@@ -20,23 +20,7 @@ public class Player2BulletCode : MonoBehaviour
     }
     void Update(){
 
-	    if (transform.position.y > 7f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.y < -7f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.x < -9f)
-	    {
-	    	Destroy(gameObject);
-	    }
-	    if (transform.position.x > 9f)
-	    {
-	    	Destroy(gameObject);
-
-	    }
+		Destroy(gameObject,4f);
 	    
 
 	   
