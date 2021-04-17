@@ -29,7 +29,7 @@ public class Buttons : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1f;
     }
 }
