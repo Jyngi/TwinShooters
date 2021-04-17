@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerB : MonoBehaviour
 {
@@ -10,11 +12,18 @@ public class PlayerB : MonoBehaviour
     public bool isAlive;
     public Transform spawnPoint;
     [SerializeField]
+    private GameObject LivesController;
+    private Stocks stockScript;
+
     // Start is called before the first frame update
+    void Start(){
+        stockScript = LivesController.GetComponent<Stocks>();
+    }
     
     // Update is called once per frame
     void Update()
     {
+        GameOverCheck();
         //Vector2 pos = transform.position;
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -36,6 +45,7 @@ public class PlayerB : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+            stockScript.DeductHealth();
             isAlive = false;
             Instantiate(explosionVFX,transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
@@ -44,11 +54,13 @@ public class PlayerB : MonoBehaviour
             // Add line here to instantiate disabled player
         }
         if(collision.gameObject.tag == "Enemy Bullet"){
+            stockScript.DeductHealth();
             isAlive = false;
             Instantiate(explosionVFX,transform.position,Quaternion.identity);
             Resurrect2();
         }
         if(collision.gameObject.tag == "Player A Bullet"){
+            stockScript.DeductHealth();
             isAlive = false;
             Instantiate(explosionVFX,transform.position,Quaternion.identity);
             Resurrect2();
@@ -62,9 +74,13 @@ public class PlayerB : MonoBehaviour
             transform.position = spawnPoint.position;
             transform.rotation = spawnPoint.rotation;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            Debug.Log("u back :D");
             isAlive = true;
         }        
+    }
+    private void GameOverCheck(){
+       if(transform.position.y <= -6f ){
+            SceneManager.LoadScene(3);
+        }
     }
 
 }

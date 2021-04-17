@@ -16,6 +16,7 @@ TagManager:
   - Player A Bullet
   - Player B Bullet
   - WallSpawn
+  - Wall2
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Player
   - Enemy
   - Border
-  - 
+  - Wall2
   - 
   - 
   - 
